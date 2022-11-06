@@ -192,7 +192,7 @@ const Profile: React.FunctionComponent<Props> = (props) =>
                             null
                         }
 
-                        {profile.data.birthdate !== null ?
+                        {profile.data.birthdate !== null && profile.data.handle === userSession.user.handle ?
                             <ShortInfo icon={faCakeCandles}>
                                 Fecha de nacimiento: {birthdate.getDate()} de {MONTHS[birthdate.getMonth()]} de {birthdate.getFullYear()}
                             </ShortInfo> :
