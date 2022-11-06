@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect } from "react";
 import Loading from "../../../../components/Loading";
+import NothingToShow from "../../../../components/NothingToShow";
 import { useAppDispatch, useAppSelector } from "../../../../store";
 import { setUserListAction, setUserListLoadMore, setUserListLoadNoMore } from "../../../../store/slices/user_lists_slice";
 import { UserListName } from "../../../../store/state/user_lists_state";
@@ -145,6 +146,11 @@ const UserList: React.FunctionComponent<Props> = (props) =>
             }
         }
     );
+
+    if(listState.noMore && listState.users.length === 0)
+    {
+        return <NothingToShow />;
+    }
 
     let content: React.ReactNode;
     if(listState.target === props.target)
