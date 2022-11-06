@@ -1,0 +1,221 @@
+@use "../../colors.scss" as Color;
+
+.loading-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0 0 0;
+    flex: 1;
+}
+
+.profile-header
+{
+    .banner-container
+    {
+        position: relative;
+        flex: 1;
+        min-height: 20px;
+        background-color: Color.$gray1;
+        overflow: hidden;
+
+        .banner
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            img
+            {
+                width: 100%;
+            }
+        }
+    }
+
+    .banner-container::before
+    {
+        content: "";
+        display: block;
+        padding-top: 33.33%;
+    }
+
+    .picture-container
+    {
+        position: relative;
+
+        .picture
+        {
+            position: absolute;
+            width: 23.58%;
+            top: 0;
+            left: 1em;
+            margin-top: -11.79%;
+            background-color: Color.$gray6;
+            border: 4px solid #fff;
+            box-sizing: border-box;
+            border-radius: 1000px;
+            overflow: hidden;
+
+            img
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        .picture::before
+        {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+    }
+
+    .options-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 80px;
+        padding: 12px 16px;
+        box-sizing: border-box;
+    }
+}
+
+.user-information
+{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 16px 16px 16px;
+
+    .user-id
+    {
+        display: flex;
+        flex-direction: column;
+
+        .user-name
+        {
+            font-size: 20px;
+            font-weight: 700;
+            color: Color.$blackText;
+        }
+
+        .user-handle
+        {
+            font-size: 15px;
+            color: Color.$silverText;
+        }
+    }
+
+    .description
+    {
+        font-size: 15px;
+        color: Color.$blackText;
+    }
+
+    .bottom-information
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .extra-information
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .short-info
+            {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 6px;
+                margin-right: 16px;
+                font-size: 15px;
+                line-height: 20px;
+                color: Color.$silverText;
+            }
+        }
+
+        .counters
+        {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5em;
+
+            .counter-container
+            {
+                display: flex;
+                flex-direction: row;
+                text-decoration: none;
+
+                .ammount
+                {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: Color.$blackText;
+                }
+
+                .label
+                {
+                    font-size: 15px;
+                    color: Color.$silverText;
+                }
+            }
+
+            .counter-container:hover
+            {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.not-found
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5em 0 0 0;
+
+    .message-container
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 0 1 360px;
+
+        .message
+        {
+            font-size: 31px;
+            font-weight: 800;
+            color: Color.$blackText;
+        }
+
+        .extra
+        {
+            font-size: 15px;
+            color: Color.$silverText;
+        }
+    }
+}
+
+.sparrow-link
+{
+    font-size: 15px;
+    text-decoration: none;
+    color: Color.$blue1;
+}
+
+.sparrow-link:hover,
+.sparrow-link:active
+{
+    text-decoration: underline;
+    color: Color.$blue1;
+}

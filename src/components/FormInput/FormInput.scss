@@ -1,0 +1,165 @@
+@use "../../colors.scss" as Color;
+
+.form-input
+{
+    position: relative;
+    border: 1px solid Color.$silver;
+    border-radius: 4px;
+
+    .title
+    {
+        position: absolute;
+        top: 18px;
+        left: 0 ;
+        padding: 0 0 0 9px;
+        font-size: 19px;
+        color: Color.$silverText;
+        transition: top 0.1s, font-size 0.25s, color 0.25s;
+    }
+
+    .limit-counter
+    {
+        position: absolute;
+        display: none;
+        top: 6px;
+        right: 8px;
+        font-size: 13px;
+        color: Color.$silverText;
+        user-select: none;
+    }
+
+    .input-container
+    {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1em;
+        padding: 12px 8px 8px 8px;
+
+        input
+        {
+            width: 100%;
+            flex: 1;
+            font-size: 17px;
+            color: Color.$blackText;
+            border: none;
+            outline: none;
+        }
+
+        textarea
+        {
+            width: 100%;
+            font-size: 17px;
+            font-family: inherit;
+            color: Color.$blackText;
+            border: none;
+            outline: none;
+            resize: none;
+        }
+    }
+
+    select
+    {
+        width: 100%;
+        margin-top: 1em;
+        padding: 12px 8px 8px 8px;
+        box-sizing: border-box;
+        font-size: 17px;
+        background-color: transparent;
+        border: none;
+        appearance: none;
+        cursor: pointer;
+        outline: none;
+
+        option
+        {
+            color: Color.$blackText;
+        }
+    }
+
+    .arrow-container
+    {
+        position: absolute;
+        top: 18px;
+        right: 12px;
+        pointer-events: none !important;
+
+        i
+        {
+            font-size: 20px;
+            color: Color.$silverText;
+            transition: color 0.1s;
+        }
+    }
+}
+
+.form-input.active
+{
+    border: 1px solid transparent;
+    outline: 2px solid Color.$blue1;
+
+    .title
+    {
+        top: 8px;
+        font-size: 14px;
+        color: Color.$blue1;
+        transition: top 0.1s, font-size 0.25s, color 0.25s;
+    }
+
+    .limit-counter
+    {
+        display: block;
+    }
+
+    .arrow-container
+    {
+        i
+        {
+            color: Color.$blue1;
+            transition: color 0.1s;
+        }
+    }
+}
+
+.form-input.static
+{
+    .title
+    {
+        position: absolute;
+        top: 8px;
+        font-size: 14px;
+        transition: color 0.25s;
+    }
+}
+
+.form-input.error
+{
+    border: 1px solid Color.$red1;
+
+    .title
+    {
+        position: absolute;
+        top: 8px;
+        font-size: 14px;
+        color: Color.$red1;
+        transition: color 0.25s;
+    }
+}
+
+.form-input.error.active
+{
+    border: 1px solid transparent;
+    outline: 2px solid Color.$red1;
+
+    .title
+    {
+        color: Color.$red1;
+    }
+}
+
+.input-error-message
+{
+    padding: 2px 10px 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: Color.$red1;
+}

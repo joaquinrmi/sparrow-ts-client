@@ -1,0 +1,75 @@
+@use "../../../../colors.scss" as Color;
+
+.compose-button
+{
+    position: fixed;
+    bottom: 4.5em;
+    right: 5%;
+
+    .nav-button
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: Color.$blackText;
+        border-radius: 200px;
+        transition: background-color 0.2s;
+        box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.35);
+        -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.35);
+        -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.35);
+
+        svg
+        {
+            font-size: 24px;
+        }
+    }
+
+    .nav-button:hover
+    {
+        background-color: Color.$gray3;
+        transition: background-color 0.3s;
+    }
+
+    .nav-button.active
+    {
+        color: Color.$blue1;
+    }
+
+    .nav-button.big-blue
+    {
+        width: 58px;
+        height: 58px;
+        background-color: Color.$blue1;
+
+        svg
+        {
+            color: Color.$whiteText;
+        }
+    }
+
+    .nav-button.big-blue:hover
+    {
+        background-color: Color.$blue2;
+        transition: background-color 0.3s;
+    }
+
+    .nav-button.big-blue.active
+    {
+        background-color: Color.$blue1;
+
+        svg
+        {
+            color: Color.$whiteText;
+        }
+    }
+}
+
+@media (min-width: 500px)
+{
+    .compose-button
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,78 @@
+.sparrow
+{
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff;
+
+    .sparrow-content
+    {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        min-width: 0;
+
+        .sparrow-left
+        {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 78px;
+            position: relative;
+            height: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            .navigation-container
+            {
+                position: fixed;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                flex: 1 1;
+                min-width: 68px;
+                max-width: 78px;
+                height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+
+                .account-menu-button-container
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 499px)
+{
+    .sparrow
+    {
+        position: relative;
+
+        .sparrow-content
+        {
+            .sparrow-left
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px)
+{
+    .sparrow
+    {
+        .sparrow-content
+        {
+            .sparrow-left
+            {
+                flex-basis: 68px;
+            }
+        }
+    }
+}

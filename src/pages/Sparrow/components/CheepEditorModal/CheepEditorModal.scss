@@ -1,0 +1,100 @@
+.cheep-editor-modal
+{
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    .editor-modal-form
+    {
+        flex: 1 1 278px;
+        min-height: 0;
+        max-height: 100%;
+    }
+
+    .modal-body
+    {
+        position: relative;
+        top: 5vh;
+        max-height: 90vh;
+
+        .modal-form-body
+        {
+            gap: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media (min-height: 309px)
+{
+    .cheep-editor-modal
+    {
+        .editor-modal-form
+        {
+            flex: 1;
+            min-height: 278px;
+        }
+    }
+}
+
+@media (max-width: 650px)
+{
+    .cheep-editor-modal
+    {
+        padding: 0;
+
+        .modal-body
+        {
+            top: 0;
+            max-height: 100vh;
+            border-radius: 0;
+            flex: 0 1 100%;
+
+            .modal-form
+            {
+                .modal-form-body
+                {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+
+                    .cheep-editor
+                    {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        .editor-body
+                        {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            flex: 1;
+
+                            .editor-columns
+                            {
+                                flex: 0 1 600px;
+
+                                .editor-right
+                                {
+                                    .editor-bottom
+                                    {
+                                        padding-bottom: 1em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 278px) and (max-width: 650px)
+{
+    .cheep-editor-modal
+    {
+        align-items: stretch;
+    }
+}

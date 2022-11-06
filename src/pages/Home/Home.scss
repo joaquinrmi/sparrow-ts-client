@@ -1,0 +1,21 @@
+.home-page-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    .navigation-button
+    {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: 9999px;
+        overflow: hidden;
+
+        img
+        {
+            width: 100%;
+        }
+    }
+}

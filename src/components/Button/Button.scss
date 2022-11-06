@@ -1,0 +1,111 @@
+@use "../../colors.scss" as Color;
+
+.button-standar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+
+    span
+    {
+        pointer-events: none;
+    }
+}
+
+.button-standar.disabled
+{
+    cursor: auto;
+}
+
+.button-standar.white
+{
+    color: Color.$blackText;
+    background-color: #fff;
+    border: 1px solid Color.$silver;
+    transition: background-color 0.25s;
+}
+
+.button-standar.white:hover
+{
+    background-color: Color.$gray3;
+    transition: background-color 0.25s;
+}
+
+.button-standar.black
+{
+    color: Color.$whiteText;
+    background-color: Color.$black1;
+    transition: background-color 0.25s;
+}
+
+.button-standar.black:hover
+{
+    background-color: Color.$black2;
+    transition: background-color 0.25s;
+}
+
+.button-standar.blue
+{
+    color: Color.$whiteText;
+    background-color: Color.$blue1;
+    transition: background-color 0.25s;
+}
+
+.button-standar.blue:hover
+{
+    background-color: Color.$blue2;
+    transition: background-color 0.25s;
+}
+
+.button-standar.blue.disabled
+{
+    background-color: Color.$blue3;
+    transition: background-color 0.25s;
+}
+
+.button-standar.blue-transparent
+{
+    color: Color.$blue1;
+    background-color: transparent;
+    border: 1px solid Color.$blue1;
+    transition: color 0.25s, border 0.25s, background-color 0.25s;
+}
+
+.button-standar.blue-transparent:hover
+{
+    color: Color.$blue2;
+    background-color: Color.$gray2;
+    border: 1px solid Color.$blue2;
+    transition: color 0.25s, border 0.25s, background-color 0.25s;
+}
+
+.button-standar.red
+{
+    color: Color.$whiteText;
+    background-color: Color.$red1;
+    transition: background-color 0.25s;
+}
+
+.button-standar.red:hover
+{
+    background-color: Color.$red2;
+    transition: background-color 0.25s;
+}
+
+.button-standar.red.disabled
+{
+    background-color: Color.$red3;
+    transition: background-color 0.25s;
+}
+
+.button-standar.light-red
+{
+    color: Color.$red1;
+    background-color: Color.$red5;
+    border: 1px solid Color.$red4;
+    transition: background-color 0.25s;
+}
