@@ -297,8 +297,6 @@ const Sparrow: React.FunctionComponent = () =>
             </Routes>
         </div>
 
-        <StatusModal id="sparrow-status-modal" />
-
         {state.recheepMenu.active ?
             <RecheepMenu /> :
             null
@@ -329,6 +327,8 @@ const Sparrow: React.FunctionComponent = () =>
         <ComposeButton />
 
         <NavigationModal />
+
+        <StatusModal id="sparrow-status-modal" />
     </div>;
 };
 
