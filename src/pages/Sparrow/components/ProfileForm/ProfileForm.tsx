@@ -155,6 +155,7 @@ const ProfileForm: React.FunctionComponent<Props> = (props) =>
         catch(err)
         {
             dispatch(setStatusMessage("Ocurrió un error inesperado."));
+            setLoading(false);
         }
     };
 
